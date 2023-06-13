@@ -1,0 +1,161 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*********************************************************************************************/
+
+/* Will I run into specificity issues with havbing the h1 override the body font? 
+Is there a good way to have the button color inherit the same color as the background?
+
+
+*/
+
+:root{
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+
+
+}
+
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 1rem;
+    border:20px solid red;
+
+}
+
+h1{
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    margin-top:20px;
+    text-transform: uppercase;
+}
+
+
+p{
+    color: var(--transparent-white);
+    font-size: .9rem;
+    line-height: 1.75;
+    margin-top:20px;
+}
+
+a{
+    display:inline-block;
+    background-color: var(--very-light-gray);
+    text-decoration: none;
+    padding: 11px 30px;
+    margin-top:25px;
+    border-radius: 35px;
+    color: green;
+}
+
+.car-cards{
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.car-card-container{
+    max-width: 20.25rem;
+    padding:3rem;
+
+}
+
+.sedans{
+    background-color: var(--bright-orange);
+}
+
+.sedans a{
+    color: var(--bright-orange);:
+}
+
+.suv{
+    background-color: var(--dark-cyan);
+}
+
+.suv a{
+    color: var(--dark-cyan);
+}
+
+.luxury{
+    background-color: var(--very-dark-cyan);
+}
+
+.luxury a{
+    color: var(--very-dark-cyan);
+}
+
+a:hover{
+    background-color: blue;
+}
+
+@media only screen and (min-width: 48rem){
+    .car-cards{
+        flex-direction: row;
+        
+}
