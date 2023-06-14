@@ -59,9 +59,11 @@ select {
 
 /*********************************************************************************************/
 
-/* Will I run into specificity issues with havbing the h1 override the body font? 
+/* 
+Questions as I code:
+Will I run into specificity issues with havbing the h1 override the body font? 
 Is there a good way to have the button color inherit the same color as the background?
-
+Better way to do the hover state changes in one section of css rather than multiple?
 
 */
 
@@ -83,8 +85,6 @@ body{
     justify-content: center;
     font-family: 'Lexend Deca', sans-serif;
     margin: 1rem;
-    border:20px solid red;
-
 }
 
 h1{
@@ -100,6 +100,7 @@ p{
     font-size: .9rem;
     line-height: 1.75;
     margin-top:20px;
+    padding-bottom: 15px;
 }
 
 a{
@@ -131,7 +132,8 @@ a{
 }
 
 .sedans a{
-    color: var(--bright-orange);:
+    color: var(--bright-orange);
+    border: 2px solid var(--bright-orange);
 }
 
 .suv{
@@ -140,6 +142,7 @@ a{
 
 .suv a{
     color: var(--dark-cyan);
+    border: 2px solid var(--dark-cyan);
 }
 
 .luxury{
@@ -148,14 +151,47 @@ a{
 
 .luxury a{
     color: var(--very-dark-cyan);
+    border: 2px solid var(--very-dark-cyan);
 }
 
+
+/* Hover state changes  */
+
 a:hover{
-    background-color: blue;
+    color: var(--very-light-gray);
 }
+
+.sedans a:hover{
+  background-color: var(--bright-orange);
+  border: 2px solid var(--very-light-gray);
+}
+
+.suv a:hover{
+  background-color: var(--dark-cyan);
+  border: 2px solid var(--very-light-gray);
+}
+
+.luxury a:hover{
+  background-color: var(--very-dark-cyan);
+  border: 2px solid var(--very-light-gray);
+}
+
+
+/* Desktop media query */
 
 @media only screen and (min-width: 48rem){
     .car-cards{
         flex-direction: row;
-        
+    }
+
+    .car-card-container{
+      max-width: 17rem;
+    }
+
+    p{
+      font-size: .8rem;
+      padding-bottom: 40px;
+
+    }
+
 }
