@@ -59,13 +59,6 @@ select {
 
 /*********************************************************************************************/
 
-/* 
-Questions as I code:
-Will I run into specificity issues with havbing the h1 override the body font? 
-Is there a good way to have the button color inherit the same color as the background?
-Better way to do the hover state changes in one section of css rather than multiple?
-
-*/
 
 :root{
 
